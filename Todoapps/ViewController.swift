@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, U {
+class ViewController: UIViewController{
     
     //ナビバーの右上ボタンを用意
     var addBtn:UIBarButtonItem!
@@ -31,9 +31,6 @@ class ViewController: UIViewController, U {
         
         table = UITableView(frame: CGRectMake(0, 0, width, height))
         table.registerClass(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "data")
-        table.dataSource = self
-        table.delegate = self
-        self.view.addView(table)
         
         
         

@@ -59,6 +59,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
     }
     
+    func onClick(){
+        let second = EditViewController()
+        self.navigationController?.pushViewController(second, animated: true)
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memos.count
     }

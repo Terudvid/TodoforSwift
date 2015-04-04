@@ -85,13 +85,13 @@
 			children = (
 				748B100D1AB547EE005670CE /* AppDelegate.swift */,
 				748B10121AB547EE005670CE /* ViewController.swift */,
+				74A64A6D1ACD156E00F59426 /* EditViewController.swift */,
+				748B10301AB55984005670CE /* Entity.swift */,
 				748B10141AB547EE005670CE /* Main.storyboard */,
 				748B10171AB547EE005670CE /* Images.xcassets */,
 				748B10191AB547EE005670CE /* LaunchScreen.xib */,
 				748B100F1AB547EE005670CE /* Todoapps.xcdatamodeld */,
-				748B10301AB55984005670CE /* Entity.swift */,
 				748B100B1AB547EE005670CE /* Supporting Files */,
-				74A64A6D1ACD156E00F59426 /* EditViewController.swift */,
 			);
 			path = Todoapps;
 			sourceTree = "<group>";

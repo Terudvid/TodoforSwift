@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     //ナビバーの右上ボタンを用意
     var addBtn:UIBarButtonItem!
@@ -31,13 +32,41 @@ class ViewController: UIViewController{
         
         table = UITableView(frame: CGRectMake(0, 0, width, height))
         table.registerClass(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "data")
-        
-        
+        table.dataSource = self
+        table.delegate = self
+        self.view.addSubview(table)
         
     }
 
+    override func viewWillAppear(animated: Bool) {
+        
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let toDoContext: NSManagedObjectContext = appDel.managedObjectContext!
+        let toDoRequest: NSFetchRequest = NSFetchRequest(entityName: "Entity")
+        
+        toDoRequest.sortDescriptors = [NSSortDescriptor(key: "data", ascending: true)]
+        toDoRequest.returnsObjectsAsFaults = false
+        var results = toDoContext.executeFetchRequest(toDoRequest, error: nil) as [Entity]!
+        memos = []
+        for data in results{
+            memos.append(data.memo)
+        }
+        self.table.reloadData()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return memos.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("data", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel?.text = memos[indexPath.row]
+        return cell
     }
 
 

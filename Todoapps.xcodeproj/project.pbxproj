@@ -15,6 +15,7 @@
 		748B101B1AB547EE005670CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748B10191AB547EE005670CE /* LaunchScreen.xib */; };
 		748B10271AB547EE005670CE /* TodoappsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748B10261AB547EE005670CE /* TodoappsTests.swift */; };
 		748B10311AB55984005670CE /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748B10301AB55984005670CE /* Entity.swift */; };
+		74A64A6E1ACD156E00F59426 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A64A6D1ACD156E00F59426 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		748B10251AB547EE005670CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		748B10261AB547EE005670CE /* TodoappsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoappsTests.swift; sourceTree = "<group>"; };
 		748B10301AB55984005670CE /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		74A64A6D1ACD156E00F59426 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				748B100F1AB547EE005670CE /* Todoapps.xcdatamodeld */,
 				748B10301AB55984005670CE /* Entity.swift */,
 				748B100B1AB547EE005670CE /* Supporting Files */,
+				74A64A6D1ACD156E00F59426 /* EditViewController.swift */,
 			);
 			path = Todoapps;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A64A6E1ACD156E00F59426 /* EditViewController.swift in Sources */,
 				748B10311AB55984005670CE /* Entity.swift in Sources */,
 				748B10131AB547EE005670CE /* ViewController.swift in Sources */,
 				748B100E1AB547EE005670CE /* AppDelegate.swift in Sources */,
@@ -413,6 +417,7 @@
 				748B102C1AB547EE005670CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		748B102D1AB547EE005670CE /* Build configuration list for PBXNativeTarget "TodoappsTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				748B102F1AB547EE005670CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

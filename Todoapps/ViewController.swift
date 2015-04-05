@@ -24,14 +24,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         self.title = "Home"
         
-        addBtn = UIBarButtonItem(barButtonSystemItem: .Add, target:self, action: "onclick")
+        addBtn = UIBarButtonItem(barButtonSystemItem: .Add, target:self, action: "onClick")
         self.navigationItem.rightBarButtonItem = addBtn
         
         let width: CGFloat! = self.view.bounds.width
         let height: CGFloat! = self.view.bounds.height
         
         table = UITableView(frame: CGRectMake(0, 0, width, height))
-        table.registerClass(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "data")
+        table.registerClass(UITableViewCell.self, forCellReuseIdentifier: "data")
         table.dataSource = self
         table.delegate = self
         self.view.addSubview(table)
@@ -63,13 +63,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let second = EditViewController()
         self.navigationController?.pushViewController(second, animated: true)
     }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memos.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("data", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = memos[indexPath.row]
+        cell.textLabel!.text = memos[indexPath.row]
         return cell
     }
 

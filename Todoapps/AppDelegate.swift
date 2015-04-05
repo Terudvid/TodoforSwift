@@ -1,4 +1,4 @@
-//
+ //
 //  AppDelegate.swift
 //  Todoapps
 //
@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,11 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         let first: ViewController = ViewController()
         myNavigationController = UINavigationController(rootViewController: first)
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = myNavigationController
         self.window?.makeKeyAndVisible()
+        self.window?.rootViewController
         return true
     }
 

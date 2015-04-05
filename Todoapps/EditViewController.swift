@@ -38,7 +38,7 @@ class EditViewController: UIViewController {
     func writeData(){
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let toDoContext: NSManagedObjectContext = appDel.managedObjectContext!
-        let toDoEntity: NSEntityDescription! = NSEntityDescription.entityForName("ToDoStore", inManagedObjectContext: toDoContext)
+        let toDoEntity: NSEntityDescription! = NSEntityDescription.entityForName("Entity", inManagedObjectContext: toDoContext)
         var newData = Entity(entity: toDoEntity, insertIntoManagedObjectContext: toDoContext)
         newData.memo = memoField.text
         newData.data = NSDate()

@@ -1,7 +1,11 @@
 # TodoforSwift
 
-ToDoアプリ
+ToDoListアプリ
 
+概要
+StroyBoardを用いないTodoListアプリ
+
+機能
 右上のプラスボタンを押すと編集画面へ
 テキストに任意の文字を入れて編集を押すとメイン画面にデータが保存される
 
